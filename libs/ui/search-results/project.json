@@ -1,0 +1,9 @@
+{
+  "name": "search-results",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui/search-results/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project search-results --web",
+  "targets": {}
+}

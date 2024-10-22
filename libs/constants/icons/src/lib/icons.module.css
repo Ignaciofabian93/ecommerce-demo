@@ -1,0 +1,9 @@
+.menu {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu:hover {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}

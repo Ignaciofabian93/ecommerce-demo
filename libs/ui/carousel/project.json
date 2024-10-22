@@ -1,0 +1,9 @@
+{
+  "name": "carousel",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui/carousel/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project carousel --web",
+  "targets": {}
+}
