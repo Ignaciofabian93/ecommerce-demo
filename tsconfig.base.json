@@ -16,37 +16,22 @@
     "baseUrl": ".",
     "paths": {
       "@graphql-client/button": ["libs/ui/button/src/index.ts"],
-      "@graphql-client/button/server": ["libs/ui/button/src/server.ts"],
       "@graphql-client/carousel": ["libs/ui/carousel/src/index.ts"],
-      "@graphql-client/carousel/server": ["libs/ui/carousel/src/server.ts"],
-      "@graphql-client/cart-context": [
-        "libs/context/cart-context/src/index.ts"
-      ],
-      "@graphql-client/cart-context/server": [
-        "libs/context/cart-context/src/server.ts"
-      ],
+      "@graphql-client/cart-context": ["libs/context/cart-context/src/index.ts"],
       "@graphql-client/catalogue": ["libs/ui/catalogue/src/index.ts"],
-      "@graphql-client/catalogue/server": ["libs/ui/catalogue/src/server.ts"],
+      "@graphql-client/categories": ["libs/ui/categories/src/index.ts"],
       "@graphql-client/footer": ["libs/ui/footer/src/index.ts"],
-      "@graphql-client/footer/server": ["libs/ui/footer/src/server.ts"],
+      "@graphql-client/graphql": ["libs/graphql/src/index.ts"],
+      "@graphql-client/graphql/server": ["libs/graphql/src/server.ts"],
       "@graphql-client/hero": ["libs/ui/hero/src/index.ts"],
-      "@graphql-client/hero/server": ["libs/ui/hero/src/server.ts"],
       "@graphql-client/icons": ["libs/constants/icons/src/index.ts"],
-      "@graphql-client/icons/server": ["libs/constants/icons/src/server.ts"],
       "@graphql-client/images": ["libs/constants/images/src/index.ts"],
-      "@graphql-client/images/server": ["libs/constants/images/src/server.ts"],
       "@graphql-client/navigation": ["libs/ui/navigation/src/index.ts"],
-      "@graphql-client/navigation/server": ["libs/ui/navigation/src/server.ts"],
       "@graphql-client/product-card": ["libs/ui/product-card/src/index.ts"],
-      "@graphql-client/product-card/server": [
-        "libs/ui/product-card/src/server.ts"
-      ],
       "@graphql-client/search": ["libs/ui/search/src/index.ts"],
       "@graphql-client/search-results": ["libs/ui/search-results/src/index.ts"],
-      "@graphql-client/search-results/server": [
-        "libs/ui/search-results/src/server.ts"
-      ],
-      "@graphql-client/search/server": ["libs/ui/search/src/server.ts"]
+      "@graphql-client/types": ["libs/types/src/index.ts"],
+      "@graphql-client/types/server": ["libs/types/src/server.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

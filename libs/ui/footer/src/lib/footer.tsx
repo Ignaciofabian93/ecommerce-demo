@@ -3,7 +3,7 @@ import styles from './footer.module.css';
 export function Footer() {
   return (
     <div className={styles['container']}>
-      <h1>Welcome to Footer!</h1>
+      <h2>Guitar Store</h2>
     </div>
   );
 }

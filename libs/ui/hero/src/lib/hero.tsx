@@ -20,7 +20,7 @@ export function Hero() {
       setIsSliding(true);
 
       const prevIndex = (currentImageIndex - 1 + images.length) % images.length;
-      setNextImageIndex(prevIndex);
+      setNextImageIndex((prevIndex + 1) % images.length);
 
       setTimeout(() => {
         setCurrentImageIndex(prevIndex);
@@ -50,17 +50,24 @@ export function Hero() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentImageIndex]);
 
+  const selectImage = (index: number) => {
+    if (!isSliding && index !== currentImageIndex) {
+      setIsSliding(true);
+      setNextImageIndex(currentImageIndex);
+
+      setTimeout(() => {
+        setCurrentImageIndex(index);
+        setIsSliding(false);
+      }, 500);
+    }
+  };
+
   return (
     <div className={styles['container']}>
       <Carousel>
         <Carousel.LeftButton onClick={handlePrev} />
         <Carousel.Wrapper>
-          <Carousel.NextImage
-            src={images[nextImageIndex]}
-            alt="next-img"
-            width={800}
-            height={400}
-          />
+          <Carousel.NextImage src={images[nextImageIndex]} alt="next-img" width={800} height={400} />
           <Carousel.CurrentImage
             src={images[currentImageIndex]}
             alt="current-img"
@@ -69,11 +76,10 @@ export function Hero() {
             isSliding={isSliding}
             direction={direction}
           />
+          <Carousel.Dots totalImages={images.length} currentIndex={currentImageIndex} selectImage={selectImage} />
         </Carousel.Wrapper>
         <Carousel.RightButton onClick={handleNext} />
       </Carousel>
     </div>
   );
 }
-
-export default Hero;

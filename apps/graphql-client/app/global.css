@@ -22,13 +22,14 @@ li {
   list-style-type: none;
 }
 
-main {
-  width: 100vw;
-  height: 100vh;
+.layout {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 button {

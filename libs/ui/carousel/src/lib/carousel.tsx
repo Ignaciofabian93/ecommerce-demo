@@ -37,15 +37,7 @@ Carousel.NextImage = function ({
   width: number;
   height: number;
 }) {
-  return (
-    <Image
-      className={styles['next-img']}
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-    />
-  );
+  return <Image className={styles['next-img']} src={src} alt={alt} width={width} height={height} />;
 };
 
 Carousel.CurrentImage = function ({
@@ -64,20 +56,30 @@ Carousel.CurrentImage = function ({
   direction: string;
 }) {
   return (
-    <div
-      className={`${styles['current-img-container']} ${
-        isSliding ? styles[`slide-in-${direction}`] : ''
-      }`}
-    >
-      <Image
-        className={styles['current-img']}
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-      />
+    <div className={`${styles['current-img-container']} ${isSliding ? styles[`slide-in-${direction}`] : ''}`}>
+      <Image className={styles['current-img']} src={src} alt={alt} width={width} height={height} />
     </div>
   );
 };
 
-export default Carousel;
+Carousel.Dots = function ({
+  totalImages,
+  currentIndex,
+  selectImage,
+}: {
+  totalImages: number;
+  currentIndex: number;
+  selectImage: (index: number) => void;
+}) {
+  return (
+    <div className={styles['dots']}>
+      {[...Array(totalImages).keys()].map((d) => (
+        <div
+          key={d}
+          onClick={() => selectImage(d)}
+          className={`${styles['dot']} ${currentIndex === d ? styles['current-dot'] : ''}`}
+        />
+      ))}
+    </div>
+  );
+};
